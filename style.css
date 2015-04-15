@@ -1,29 +1,12 @@
 body {
 	background:#333333;
-	color:lime;
 }
 
 table, td, th, tr { 
-	background:#333335;
+	background:silver;
 	border:0px solid #AAAAAA;
 	text-align:center; 
 	border-collapse:collapse; 
-}
-
-.resetButton {
-	background:gray;
-	border:1px solid #AAAAAA;
-	color:white;
-	text-align:center; 
-	border-collapse:collapse; 
-	outline:none;
-	border-radius:5px;
-}
-
-.resetButton:hover {
-	border:1px solid black;
-	color:lime; 
-	outline:none;
 }
 
 .numButton {
@@ -32,7 +15,7 @@ table, td, th, tr {
 	border:0px none;
 	background:url(./images/buttons/bt1.png) no-repeat;
 	background-size: contain;
-	font-size:14pt;
+	font-size:18pt;
 	color:black; 
 	outline:none;
 }
@@ -49,7 +32,8 @@ input[type="text"] {
 	color:lime;
 	border-radius:3px; 
 	outline: none;
-	font-family: 'digital_display_tfbregular', Arial, sans-serif;
+	font-family: 'ds-digitalitalic', Arial, sans-serif;
+	box-sizing: border-box;
 }
 
 .parent {
@@ -68,12 +52,18 @@ input[type="text"] {
 #calc_input {
 	background:silver;
 	color:black;
-	font-size: 40pt;
+	font-size: 25pt;
+	text-align:right;
+	width:100%;
 }
 
 @font-face {
-    font-family: 'digital_display_tfbregular';
-    src: url('digital_display_tfb-webfont.svg#digital_display_tfbregular') format('svg');
+	font-family: 'ds-digitalitalic';
+    src: url('ds-digii-webfont.svg#ds-digitalitalic') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+fieldset {
+	border-radius: 2em;
 }

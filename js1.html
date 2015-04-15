@@ -19,64 +19,49 @@
 <div class="parent">
 <div class="child">
 	<center>
-	<font id="browserInfoField"> </font>
-	<form id="loginform" method="get" action="form.php" onsubmit="showPopUp()">
-	<fieldset style="display:inline-block;">
-	<legend><font color="gray">Login form</font></legend>
-	<br>
-	<font color="lime">[Enter the Login:]</font>
-	<br>
-	<input type="text" id="calc_input" name="calc_input"></input>
-	<p>
-	<input type="reset" class="resetButton" onclick="buttonResetClick()"  value="reset"></input>
-	<input type="submit" class="resetButton" value="submit =>"></input>
-	</fieldset>
-	</form>
-	
-	<p>
-	<font color="lime">[or.. just press the button:]</font>
-	<br>
-	<a href="./frames.html">
-		<button class="resetButton">next page =></button>
-	</a>
-	<p>
-	
-	<fieldset style="display:inline-block;">
-	<legend><font color="gray">Num panel</font></legend>
-	<table>
-		<tr>
-			<td><button class="numButton" onclick="buttonClick(this)">+</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">-</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">*</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">/</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">=</button></td>
-		</tr>
+	<fieldset style="display:inline-block; background:gray;">
+		<legend><font color="silver">Calculator</font></legend>
+		<input type="text" id="calc_input" name="calc_input"></input>
+		<p>
+	<fieldset style="display:inline-block; background:silver;">
+		<table>
+			<tr>
+				<td><button class="numButton" onclick="buttonClick(this)">+</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">-</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">*</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">/</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">=</button></td>
+			</tr>
 		
-		<tr>
-			<td><button class="numButton" onclick="buttonClick(this)">1</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">2</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">3</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)"><</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">c</button></td>
-		</tr>
+			<tr>
+				<td><button class="numButton" onclick="buttonClick(this)">1</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">2</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">3</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)"><</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">c</button></td>
+			</tr>
 		
-		<tr>
-			<td><button class="numButton" onclick="buttonClick(this)">4</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">5</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">6</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">(</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">)</button></td>
-		</tr>
+			<tr>
+				<td><button class="numButton" onclick="buttonClick(this)">4</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">5</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">6</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">(</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">)</button></td>
+			</tr>
 			
-		<tr>
-			<td><button class="numButton" onclick="buttonClick(this)">7</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">8</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">9</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">.</button></td>
-			<td><button class="numButton" onclick="buttonClick(this)">0</button></td>
-		</tr>
-	</table>
+			<tr>
+				<td><button class="numButton" onclick="buttonClick(this)">7</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">8</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">9</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">.</button></td>
+				<td><button class="numButton" onclick="buttonClick(this)">0</button></td>
+			</tr>
+		</table>
+			<input type="checkbox" checked value="output" id="cb1" onChange="changeOutput(this)"><label for="cb1" style="color:dimgray;">Display output</label></input>
 	</fieldset>
+	</fieldset>
+	<br>
+	<font id="browserInfoField" style="color:silver;"> </font>
 	</center>
 </div>
 </div>

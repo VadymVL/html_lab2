@@ -1,40 +1,34 @@
-var password;
-
-function randomPassword() {
-	document.getElementById("login_input").value = "";
-	/*reset edit text*/
-	document.getElementById("calc_input").value = "";
-	/*reset edit text*/
-	do {
-		password = Math.floor(Math.random() * 1000);
-		/*getting random number*/
-	} while (password < 100);
-	var pass = document.getElementById("text_password");
-	/*set it to the text value*/
-	pass.firstChild.nodeValue = "[" + password + "]";
-	/*pass.innerHTML = password;*/
-	/*as variant (the same as line above )*/
-}
+var output;
 
 function buttonClick(button) {
 	var edit = document.getElementById("calc_input");
-	if (button.firstChild.nodeValue != "=") {
-		edit.value += button.firstChild.nodeValue; 
-		if (button.firstChild.nodeValue == "c") edit.value = "";
-		if (button.firstChild.nodeValue == "<") edit.value = edit.value.slice(0,-2); 
+	var buttonValue = button.firstChild.nodeValue;
+	if (buttonValue == "=") {
+		if(output == true) {
+			if( (edit.value.indexOf("+") > -1) || (edit.value.indexOf("-") > -1) ) { 
+				document.open();
+				document.write("<h1>" + eval(edit.value) + "</h1>");
+				document.close();
+				return;
+			}
+			if( (edit.value.indexOf("*") > -1) || (edit.value.indexOf("/") > -1) ) {
+				alert("Answer: " + eval(edit.value));
+				return;
+			}
+		} else {
+			edit.value = eval(edit.value);
+		}
 	} else {
-		edit.value = eval(edit.value);
+		edit.value += buttonValue; 
+		if (buttonValue == "c") edit.value = "";
+		if (buttonValue == "<") edit.value = edit.value.slice(0,-2); 
+	}	
+}
+
+function changeOutput(checkBox) {
+	if(checkBox.checked == false) {
+		output = true;
+	} else {
+		output = false;
 	}
-	
-}
-
-function buttonResetClick() {
-	var edit = document.getElementById("calc_input");
-	edit.value = "";
-	randomPassword();
-}
-
-function showPopUp() {
-	alert("Your login: " + ((login_input.value) ? login_input.value : "is empty") + /*check, if values is available, and output them*/
-		"\nYour password: " + ((calc_input.value) ? calc_input.value : "is empty"));
 }
